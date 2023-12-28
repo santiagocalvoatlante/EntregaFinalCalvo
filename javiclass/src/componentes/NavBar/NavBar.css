@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid red;
+}
+li {
+    display: inline-block;
+    margin: 1rem;
+    cursor: pointer;
+}
