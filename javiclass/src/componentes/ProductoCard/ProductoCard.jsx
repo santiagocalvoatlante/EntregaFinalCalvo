@@ -1,5 +1,5 @@
 
-import Productoimagen from '../productoimagen/Productoimagen';
+import Productoimagen from '../productoimagen/ProductoImagen';
 import ProductoInfo from '../ProductoInfo/ProductoInfo';
 import ProdcutoBoton from '../ProductoBoton/ProdcutoBoton';
 
