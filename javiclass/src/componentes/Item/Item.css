@@ -1,0 +1,13 @@
+.productocard {
+    background-color: beige;
+    border-radius: 10px;
+    width: 15rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.productocard img {
+    width: 150px;
+}

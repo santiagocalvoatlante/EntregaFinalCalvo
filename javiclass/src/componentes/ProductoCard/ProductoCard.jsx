@@ -1,14 +1,14 @@
 
-import Productoimagen from '../productoimagen/ProductoImagen';
+/* import Productoimagen from '../productoimagen/ProductoImagen';
 import ProductoInfo from '../ProductoInfo/ProductoInfo';
-import ProdcutoBoton from '../ProductoBoton/ProdcutoBoton';
+import ProdcutoBoton from '../ProductoBoton/ProdcutoBoton'; */
 
 const ProductoCard = () => {
   return (
     <div>
-       <Productoimagen/>
-       <ProductoInfo/>
-       <ProdcutoBoton/>
+       {/* <Productoimagen/> */}
+     {/*   <ProductoInfo/>
+       <ProdcutoBoton/> */}
     </div>
   )
 }
