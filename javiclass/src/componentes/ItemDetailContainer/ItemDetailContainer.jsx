@@ -11,7 +11,10 @@ const ItemDetailCointariner = () => {
   const {idItem} = useParams();
   useEffect (()=>{
 getUnProducto(idItem)
-.then(res =>setProducto (res))
+.then(res =>{
+  console.log(res, idItem);
+  setProducto (res)
+  })
   },[idItem])
   return (
     <div> 
