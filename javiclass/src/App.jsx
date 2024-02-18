@@ -1,36 +1,33 @@
-import ProductoCard from './componentes/ProductoCard/ProductoCard';
-import React from 'react'
-import './App.css';
-import ProdcutoBoton from './componentes/ProductoBoton/ProdcutoBoton';
+import React from 'react';
 import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './componentes/ItemListCointainer/ItemListContainer';
-import TituloPrincipal from './componentes/TituloPrincipal/TituloPrincipal';
-import ItemCount from './componentes/ItemCount/ItemCount';
-import Vista from './componentes/Vista/Vista';
-import Articulos from './componentes/Articulos/Articulos';
-import Promesas from './componentes/Promesas/Promesas';
-import Map from './componentes/Map/Map';
-import Item from './componentes/Item/Item';
-import ItemList from './componentes/ItemList/ItemList';
-import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer'
-
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+//Importamos el CarritoProvider: 
+import { CarritoProvider } from './context/CarritoContext';
+//envuelvan la aplicación con el CarritoProvider. 
+import "./App.css"
+import Cart from './componentes/Cart/Cart';
+import Checkout from './componentes/Checkout/Checkout';
+import CargarArray from './componentes/CargarArray/CargarArray';
 
 const App = () => {
   return (
-    <div>
+    <>
+    <CargarArray></CargarArray>
       <BrowserRouter>
-        <NavBar></NavBar>
-        <Routes>
-          <Route path='/' element= {<ItemListContainer />} />
-          <Route path='/categoria/:idCategoria' element= {<ItemListContainer />} />
-          <Route path='/item/:idItem' element= {<ItemDetailContainer />} />
-         
-        </Routes>
+        <CarritoProvider>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={ <ItemListContainer /> } />
+            <Route path='/categoria/:idCategoria' element={ <ItemListContainer /> } />
+            <Route path='/item/:idItem' element={ <ItemDetailContainer /> } />
+            <Route path='/cart' element = {<Cart/>} />
+            <Route path='/checkout' element = {<Checkout/>} />
+          </Routes>
+        </CarritoProvider>
       </BrowserRouter>
-
-    </div>
-
+    </>
   )
 }
 

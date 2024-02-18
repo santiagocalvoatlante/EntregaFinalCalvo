@@ -1,29 +1,39 @@
-/* import React, { useState } from 'react' */
 import { useState } from "react";
+import "./ItemCount.css";
+import Button from 'react-bootstrap/Button';
 
 
-const ItemCount = () => {
- const [contador, setContador] = useState(1)
-    
- const incrementar = () => {
-    if (contador < 10) {
+const ItemCount = ({ inicial, funcionAgregar }) => {
+
+  const [contador, setContador] = useState(1);
+
+
+  const incrementar = () => {
     setContador(contador + 1);
- }
-}
+  }
 
- const decrementar = () => {
-    if (contador > 1) {
-    setContador(contador - 1);
- }
-}
- return (
-        <div>
-            <button onClick= {decrementar}> - </button>
-            <p> {contador} </p>
-            <button onClick= {incrementar}> + </button>
-        </div>
-    )
+  const decrementar = () => {
+    if (contador > inicial) {
+      setContador(contador - 1);
+    }
+  }
+
+
+  return (
+    <>
+      <div className="botones">
+        <Button variant="secondary" onClick={decrementar}>-</Button>
+        <p className="p-botones"> {contador} </p>
+        <Button variant="secondary" onClick={incrementar}>+</Button>
+
+      </div>
+      <Button className="miBtn" variant="dark"  onClick={() => funcionAgregar(contador)}> Agregar al Carrito </Button>
+    </>
+  )
+
 
 }
 
 export default ItemCount
+
+

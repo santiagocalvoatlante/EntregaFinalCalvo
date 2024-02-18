@@ -11,3 +11,8 @@
 .productocard img {
     width: 150px;
 }
+
+.productocard h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: medium;
+}

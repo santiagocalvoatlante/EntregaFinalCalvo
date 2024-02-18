@@ -1,0 +1,17 @@
+.botones {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 30px;
+  
+}
+.p-botones {
+   padding: 8px;
+   align-self: center;
+  margin: auto;
+   font-size: x-large;
+   justify-content: center;
+  
+}
+
+

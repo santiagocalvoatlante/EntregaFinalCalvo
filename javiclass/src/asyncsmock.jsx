@@ -4,6 +4,7 @@ const productos = [
     { id: "3", nombre: "Zapatillas Nike Air Max Systm", precio: 3000, img: "../img/airmax.jpg", idCat: "3" },
     { id: "4", nombre: "Zapatillas Converse All Star BB Prototype CX Mid Textil", precio: 4000, img: "../img/midtextil.jpg", idCat: "3" },
 ]
+
 export const getProductos = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
